@@ -1,12 +1,14 @@
 <script>
-
+    let showModal = false;
 </script>
 
+{#if showModal}
 <div class="backdrop">
     <div class="modal">
-        <p>Sign up</p>
+        <p>Sign up now!</p>
     </div>
 </div>
+{/if}
 
 <style>
 

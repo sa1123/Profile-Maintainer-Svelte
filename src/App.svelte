@@ -1,7 +1,10 @@
 <script>
+	import Modal from './Modal.svelte';
+
 	let people = [
 		{ name: 'Yoshi', beltColor: 'green', age: 25, id: 1},
-		{ name: 'Mario', beltColor: 'red', age: 30, id: 2}
+		{ name: 'Mario', beltColor: 'red', age: 30, id: 2},
+		{ name: 'Mr. Game&Watch', beltColor: 'black', age: 35, id: 3}
 	];
 
 	const handleClick = (id) => {
@@ -10,10 +13,11 @@
 
 </script>
 
+<Modal />
 <main>
 	{#each people as person (person.id)}
 		<div>
-			<h4>{person.name}</h4>
+			<h3>{person.name}</h3>
 			{#if person.beltColor === 'black'}
 				<p><strong>Master Ninja</strong></p>
 			{/if}
