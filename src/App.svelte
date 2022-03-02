@@ -2,6 +2,7 @@
 	import Modal from './Modal.svelte';
 
 	let showModal = false;
+	let isPromo = true;
 
 	const toggleModal = () => {
 		showModal = !showModal;
@@ -19,7 +20,7 @@
 
 </script>
 
-<Modal message="Hey there again" {showModal} on:click={toggleModal}/>
+<Modal message="Hey there again" {showModal} {isPromo} on:click={toggleModal}/>
 <main>
 	<button on:click={toggleModal}>Open Modal</button>
 	{#each people as person (person.id)}
